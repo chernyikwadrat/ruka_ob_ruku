@@ -1,0 +1,95 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(13, 270px);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "text-1 text-1 text-1 text-1 smile-1 scream"
+    "text-1 text-1 text-1 text-1 smile-1 scream"
+    "tears-1 tears-1 tears-1 child child child"
+    "slides-1 slides-1 slides-1 child child child"
+    "hands-1 hands-1 text-2 text-2 smile-2 smile-2"
+    "hands-1 hands-1 text-2 text-2 eyes-1 eyes-1"
+    "scream-2 scream-2 smile-3 smile-3 smile-3 slide-2"
+    "scream-2 scream-2 text-3 text-3 text-3 slide-2"
+    "hands-2 hands-2 hands-2 tears-2 tears-2 slide-2"
+    "hands-2 hands-2 hands-2 tears-2 tears-2 slide-2"
+    "slide-3 slide-3 eyes-2 eyes-2 smile-4 smile-4"
+    "tears-3 tears-3 eyes-2 eyes-2 smile-4 smile-4"
+    "footer footer footer footer footer footer";
+}
+
+.text-1 { grid-area: text-1; }
+
+.smile-1 { grid-area: smile-1; }
+
+.scream { grid-area: scream; }
+
+.tears-1 { grid-area: tears-1; }
+
+.slides-1 { grid-area: slides-1; }
+
+.child { grid-area: child; }
+
+.hands-1 { grid-area: hands-1; }
+
+.text-2 { grid-area: text-2; }
+
+.smile-2 { grid-area: smile-2; }
+
+.eyes-1 { grid-area: eyes-1; }
+
+.scream-2 { grid-area: scream-2; }
+
+.smile-3 { grid-area: smile-3; }
+
+.text-3 { grid-area: text-3; }
+
+.slide-2 { grid-area: slide-2; }
+
+.hands-2 { grid-area: hands-2; }
+
+.tears-2 { grid-area: tears-2; }
+
+.slide-3 { grid-area: slide-3; }
+
+.tears-3 { grid-area: tears-3; }
+
+.eyes-2 { grid-area: eyes-2; }
+
+.smile-4 { grid-area: smile-4; }
+
+.footer { grid-area: footer; }
+
+
+
+ @media screen and (max-width: 768px)
+ {
+.container {
+  display: grid; 
+  grid-template-columns: repeat(3, 256px); 
+  grid-template-rows: repeat(15, 160px); 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "text-1 text-1 text-1"
+    "text-1 text-1 text-1"
+    "scream tears-1 tears-1"
+    "scream slides-1 slides-1"
+    "child child smile-1"
+    "child child smile-1"
+    "hands-1 text-2 smile-2"
+    "hands-1 text-2 eyes-1"
+    "scream-2 smile-3 smile-3"
+    "scream-2 text-3 text-3"
+    "hands-2 hands-2 tears-2"
+    "hands-2 hands-2 tears-2"
+    "slide-3 eyes-2 smile-4"
+    "tears-3 eyes-2 smile-4"
+    "footer footer footer"; 
+}
+.slide-2 {
+	display:none;
+ }
+}
+

@@ -1,0 +1,484 @@
+:root {
+  --red: #E10404;
+  --blue: #00279B;
+}
+ 
+body {
+  font-family: 'Soyuz Grotesk';
+  color: var(--red);
+}
+p {font-size: 32px;}
+.text-1 {
+  border: 2px solid var(--blue);
+  background-color: var(--red);
+  color: white;
+  font-size: 236px;
+  line-height: 160px;
+} 
+.text-1 * { padding-left: 48px; }
+.text-1 #h1-text-1 { padding-left: 360px; }
+
+
+.smile-1 { 
+ border: 2px solid var(--blue);
+ background-color: white;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-template-rows: repeat(7, 1fr);
+ padding-left: 40px;
+ padding-top: 24px;
+  }
+.smile-1:hover img:nth-child(even)  {animation-play-state: paused;}
+.smile-1:hover img:nth-child(odd)  {animation-play-state: paused;}
+.smile-1 img:nth-child(even) {animation: rotate-1 2s ease-in-out 0.5s infinite alternate ;}
+.smile-1 img:nth-child(odd) { animation: rotate-2 2s ease-in-out 0.5s infinite alternate ; }
+@keyframes rotate-1 {  
+  0% {transform: scale(1, 1) }
+  100% {transform: scale(1, -1) }
+}
+@keyframes rotate-2 {  
+  0% {transform: scale(1, -1) }
+  100% {transform: scale(1, 1) }
+}
+
+.scream { 
+  border: 2px solid var(--blue);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: var(--blue);}
+.scream p:nth-child(1) {margin-left: -160px;}
+.scream p:nth-child(3) {margin-left:  40px;}
+.scream-img {
+  width: 278px;
+  height: 119px;
+  background-image: url('../images/mouth.png');
+  transition: 0.8s ease-in-out;
+}
+.scream:hover .scream-img {
+  width: 278px;
+  height: 397px;
+  background-image: url('../images/scream.png')
+}
+
+
+.tears-1 { 
+ border: 2px solid var(--blue);
+ background-color: white;
+ display: grid;
+ grid-template-columns: repeat(18, 1fr);
+ grid-template-rows: repeat(3, 1fr);
+ padding-left: 12px;
+ padding-top: 12px;
+}
+.tears-1 > div:hover > img {transform: scale(0.5,0.5)}
+
+
+.slides-1 {
+  border: 2px solid var(--blue);
+  background-image: url(../images/slides-1.gif);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+} 
+.slides-1 > div {display: flex;  justify-content: space-between; }
+.slides-1 > div:nth-child(1) {margin-left: 220px; margin-top: 80px; width: 450px;}
+.slides-1 > div:nth-child(2) {margin-left: -100px; margin-bottom: 80px;width: 440px;}
+.slides-1 > img {margin-top: -72px; margin-bottom: -72px;}
+
+.child {  border: 2px solid var(--blue); display: flex; overflow: hidden;}
+.child  > img:nth-child(1) { height:820px; margin-top: -200px; overflow: hidden; transform: rotate(75deg);transition: 1s; }
+.child  > img:nth-child(2) {  height:690px; margin-top: -80px;overflow: hidden; z-index: -1;transition: 1s; }
+.child  > img:nth-child(3) { height:820px; margin-top: 40px; overflow: hidden; transform: scale(-1,1) rotate(75deg); transition: 1s; }
+.child:hover  > img:nth-child(1) {   transform: rotate(75deg) translate(-20px,-120px) ; }
+.child:hover   > img:nth-child(3) {   transform: scale(-1,1) rotate(75deg) translate(-20px,-120px); }
+
+ 
+
+.hands-1 { 
+ border: 2px solid var(--blue);
+ background-color: white; 
+overflow: hidden;}
+.hands-1:hover > .hands-1-hands> img:nth-child(1) {animation-play-state: paused;}
+.hands-1:hover > .hands-1-hands> img:nth-child(2) {animation-play-state: paused;}
+.hands-1:hover > .lines> img:nth-child(1) {animation-play-state: paused;}
+.hands-1:hover > .lines> img:nth-child() {animation-play-state: paused;}
+.hands-1 > p {
+  margin-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  width: 480px;
+}
+.hands-1 > .hands-1-hands {
+  display: flex;
+  margin-left: -40px;  
+ 
+}
+.hands-1 > .hands-1-hands> img:nth-child(1) {
+  height: 259px;
+  animation: hands-1 2s infinite; 
+}
+.hands-1 >.hands-1-hands > img:nth-child(2) {
+  height: 259px;
+  animation: hands-2 2s infinite; 
+}
+@keyframes hands-1 {  
+  0% {transform: translateY(160px) rotate(15deg); }
+  50% {transform: translateY(0px);}
+  100% {transform: translateY(160px) rotate(15deg);}
+}
+@keyframes hands-2 {  
+  0% {transform: scale(-1,1) translateY(0px); }
+  50% {transform: scale(-1,1) translateY(160px) rotate(15deg);;}
+  100% {transform: scale(-1,1) translateY(0px);}
+}
+.hands-1 > .lines {
+  display: flex;
+  width: 480px;
+  justify-content: space-between; 
+  margin-left: 80px;
+  margin-bottom: -200px;  
+  margin-top: 140px;
+ overflow: hidden;
+}
+.hands-1 > .lines> img:nth-child(1) {
+  animation: lines-1 2s ease-in-out infinite; 
+}
+.hands-1 > .lines> img:nth-child(2) {
+  animation: lines-2 2s ease-in-out infinite; 
+}
+@keyframes lines-1 {  
+  0% {transform: scale(-1,1); opacity: 1; }
+  50% {transform: scale(-1,1);opacity:0;}
+  100% {transform: scale(-1,1);opacity: 1;}
+}
+@keyframes lines-2 {  
+  0% { opacity: 0; }
+  50% {opacity:1;}
+  100% {opacity: 0;}
+}
+
+.text-2 { 
+ border: 2px solid var(--blue);
+ background-color: white;
+ transition: 1s ease-in-out; 
+}
+.text-2 > .signs{
+  display: flex;
+  width: 560px;
+  justify-content:  space-between;  
+  margin-left: 36px;
+  margin-top: 40px;
+}
+.text-2 > .signs > p{
+ transition: 1s ease-in-out;
+ font-size: 434px; 
+}
+.text-2:hover {  background-color: var(--red); }
+/*.text-2:hover > .signs > p { color: var(--blue); }*/
+.text-2:hover > .text-2-a> p { color: white; }
+ /*.text-2:hover > .signs > p{transform: scale(1.2,1.2); cursor: pointer; }*/
+
+.text-2 > .text-2-a{
+ display: grid;
+ grid-template-columns: repeat(7, 1fr);
+ grid-template-rows: repeat(5, 1fr);
+ margin-left: 36px;
+ margin-top: -440px;
+}
+.text-2 > .text-2-a > p{
+   font-size: 92px;
+   color: var(--blue);
+}
+.text-2 > .text-2-a > p:hover{
+   color: var(--red);
+   cursor: pointer;
+}
+
+.smile-2   {
+  border: 2px solid var(--blue);
+  background-color: var(--red);
+  animation: smile-2 1.6s  ease-in-out infinite alternate;
+} 
+.smile-2:hover {animation-play-state: paused;}
+@keyframes smile-2 {  
+  0% { background-image: url('../images/smile-2-1.png'); }
+  33% {background-image: url('../images/smile-2-2.png');}
+  66% {background-image: url('../images/smile-2-3.png');}
+  100% {background-image: url('../images/smile-2-4.png');}
+}
+
+.eyes-1 {  
+ border: 2px solid var(--blue);
+ background-color: white; }
+.eyes-1 > .brows-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 620px;
+  margin-left: 4px;
+  margin-top: 32px;
+}
+.eyes-1 img {transition: 1s;}
+.eyes-1 > .brows-1 > img:nth-child(2) {
+  transform: scale(-1,1);
+}
+.eyes-1 > .eyes-1-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 560px;
+  margin-left: 36px;
+  margin-top: -16px;
+}
+.eyes-1 > .eyes-1-1> img:nth-child(2) {
+  transform: scale(-1,1);
+}
+.eyes-1:hover > .brows-1 > img:nth-child(1) {transform: rotate(15deg) translateX(16px);}
+.eyes-1:hover > .brows-1 > img:nth-child(2) {transform: scale(-1,1) rotate(15deg) translateX(16px);}
+.eyes-1:hover > .eyes-1-1 > img:nth-child(1) {transform: rotate(10deg) translateX(16px) scale(1,0.8);}
+.eyes-1:hover > .eyes-1-1 > img:nth-child(2) {transform: scale(-1,1) rotate(10deg) translateX(16px) scale(1,0.8);}
+
+.scream-2 { 
+ border: 2px solid var(--blue); 
+background-color: white;}
+
+.scream-2 > p {font-size: 540px; margin-left: 120px; margin-top: -40px; transition: 1s;}
+.scream-2 > div {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-template-rows: repeat(2, 1fr);
+ margin-left: 80px;
+ margin-top: -480px;
+}
+
+.scream-2 > div > img:nth-child(1) {animation: movement-1 8s ease-in-out infinite alternate;}
+.scream-2 > div > img:nth-child(2) {animation: movement-2 8s -1s  ease-in-out infinite reverse;}
+.scream-2 > div > img:nth-child(3) {animation: movement-3 8s  ease-in-out infinite;}
+.scream-2 > div > img:nth-child(4) {animation: movement-4 8s ease-in-out infinite alternate;}
+@keyframes movement-1 { 
+  0% {transform: scale(1,1); }
+  25% {transform: scale(1.1,1.1) translate(336px,80px) rotate(30deg);}
+  50% {transform: scale(0.8,0.8) translate(-120px,80px);}
+  75% {transform: scale(1,1) translate(360px,120px) rotate(80deg);}
+  100% {transform: scale(1.2,1.2) translate(120px,200px) rotate(-10deg);;}  
+}
+@keyframes movement-2 { 
+  0% {transform: scale(1,1); }
+  25% {transform: scale(0.9,0.9) translate(-120px,-48px) rotate(-10deg);}
+  50% {transform: scale(1,1) translate(-350px,80px) rotate(20deg);}
+  75% {transform: scale(0.7,0.7) translate(0px,430px) rotate(-20deg);}
+  100% {transform: scale(1,1);}  
+}
+@keyframes movement-3 { 
+  0% {transform: scale(1,1); }
+  25% {transform: scale(0.9,0.9) translate(-100px,-48px) rotate(-10deg);}
+  50% {transform: scale(1,1) translate(350px,56px) rotate(20deg);}
+  75% {transform: scale(0.7,0.7) translate(-140px,-280px) rotate(-20deg);}
+  100% {transform: scale(1,1);}  
+}
+@keyframes movement-4 { 
+  0% {transform: scale(1,1); }
+  25% {transform: scale(0.7,0.7) translate(-520px,-300px) rotate(30deg);}
+  50% {transform: scale(1.2,1.2) translate(-100px,16px);}
+  75% {transform: scale(1,1) translate(80px,40px) rotate(80deg);}
+  100% {transform: scale(0.9,0.9) translate(-200px,-316px) rotate(-10deg);;}  
+}
+.scream-2:hover > div> img {animation-play-state: paused; cursor: pointer;}
+.scream-2:hover > p {transform: scale(1.2,1.2); cursor: pointer;}
+
+.smile-3 { 
+ border: 2px solid var(--blue);
+ background-color: white; 
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+.smile-3 > img:nth-child(1) {height: 102px;animation: rotate-1 2s infinite ease-in-out alternate;}
+.smile-3 > img:nth-child(2) {height: 102px;animation: rotate-2 2s infinite ease-in-out alternate;}
+.smile-3 > img:nth-child(3) {height: 102px;animation: rotate-1 2s infinite ease-in-out alternate;}
+.smile-3 > img:hover {animation-play-state: paused;}
+
+.text-3 {
+  border: 2px solid var(--blue);
+  background-color: var(--blue);
+}  
+.text-3 > h2 {
+  color: white;
+  font-size: 134px;
+  line-height: 120px;
+  margin-left: 40px;
+}
+
+.hands-2 {
+  border: 2px solid var(--blue);
+  background-color: var(--red);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+} 
+.hands-2:hover > img:nth-child(odd) {animation-play-state: paused;}
+.hands-2:hover > img:nth-child(even) {animation-play-state: paused;}
+.hands-2 > img {height:  1000px; margin-top: -200px; margin-right: 20px; margin-left: 40px; }
+.hands-2 > img:nth-child(odd) { animation: hand-move-1 8s infinite alternate; }
+.hands-2 > img:nth-child(even) { animation: hand-move-2 8s    infinite alternate}
+@keyframes hand-move-1{
+  0% {transform: scale(1,-1) rotate(45deg) translate(0px,500px);}
+  100% {transform: scale(1,-1) rotate(45deg);}
+}
+@keyframes hand-move-2{
+  0% {transform:  rotate(-45deg) translate(0px,500px);}
+  100% {transform: rotate(-45deg);}
+}
+
+
+
+.slide-2 { 
+ border: 2px solid var(--blue);
+ background-image: url(../images/slides-2.gif);
+ background-size:  320px;
+ background-repeat: no-repeat;    
+ display: flex;
+ justify-content: space-between;
+ padding: 40px;
+} 
+.slide-2 > div:nth-child(1){margin-top: 340px; height: 580px; display: flex; flex-direction: column; justify-content: space-between;}
+.slide-2 > div:nth-child(2){margin-top: 80px; height: 580px; display: flex; flex-direction: column; justify-content: space-between;}
+
+.tears-2 { 
+ border: 2px solid var(--blue);
+ background-color: white; 
+ overflow: hidden;}
+
+.tears-2 > .eyes {
+  display: flex;
+  justify-content:  space-around;
+  margin-top: 24px;
+}
+.tears-2 > .eyes > img:nth-child(2) {transform: scale(-1,1);}
+.tears-2 > .tears {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,1fr);
+  margin-left:  64px;
+  margin-top: 0px;
+}
+.tears-2 > .tears > img {animation: tears-down-3 2s infinite ease-in-out   alternate;}
+.tears-2 > .tears > img:nth-child(3n+2) {animation: tears-down-1 2s  ease-in-out infinite alternate;}
+.tears-2 > .tears > img:nth-child(3n+1) {animation: tears-down-2 2s ease-in-out infinite alternate;}
+@keyframes tears-down-1 {
+  0% {transform: scale(0.6,0.6);}
+  50% {transform: scale(0.6,0.6) translateY(-10px);}
+  100% {transform: scale(0.6,0.6) translateY(40px);}
+}
+@keyframes tears-down-2 {
+  0% {transform: scale(0.8,0.8);}
+  50% {transform: scale(0.8,0.8) translateY(-20px);}
+  100% {transform: scale(0.8,0.8) translateY(80px);}
+}
+@keyframes tears-down-3 {
+  0% {transform: scale(1,1);}
+  50% {transform: scale(1,1) translateY(-5px);}
+  100% {transform: scale(1,1) translateY(20px);}
+}
+.tears-2:hover > .tears > img {animation-play-state: paused;}
+
+.slide-3 { 
+ border: 2px solid var(--blue); 
+background-image: url(../images/slides-3.gif);}
+
+.tears-3 {
+  border: 2px solid var(--blue);
+  background-color: var(--blue);
+  overflow: hidden;
+} 
+.tears-3:hover > img:nth-child(1) {animation-play-state: paused;}
+.tears-3:hover > img:nth-child(2) {animation-play-state: paused;}
+.tears-3 > img:nth-child(1) {margin-top:   -515px;animation: marquee-1 4s linear infinite;}
+.tears-3 > img:nth-child(2) {animation: marquee-1 4s linear infinite;}
+@keyframes marquee-1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(515px);
+  }
+}
+
+
+.eyes-2 { 
+ border: 2px solid var(--blue); 
+background-color: white;
+padding-top: 60px;
+padding-left: 100px;
+ }
+.eyes-2 > img {transition: 1s;}
+.eyes-2:hover > img:nth-child(1) {transform:  rotate(30deg) translateY(-40px);}
+.eyes-2:hover > img:nth-child(2) {transform:  scale(1,1.2);}
+
+.smile-4   {
+  border: 2px solid var(--blue);
+  background-color: var(--red);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+} 
+.smile-4 > div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 160px;
+  
+}
+.smile-4 > div > img:nth-child(1) {height: 66px; width: 158px;margin-bottom: -96px; margin-left: 56px; z-index: 2; animation: smile-4 1s infinite ease-in-out;}
+.smile-4 > div > img:nth-child(2) {height: 440px; width: 320px; animation: boy 1s infinite ease-in-out;}
+
+@keyframes smile-4 {
+  0% {transform: scale(1,1);}
+  50% {transform: scale(-1,-1);opacity: 0;}
+  100% {transform: scale(1,1);}
+}
+@keyframes boy {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+.smile-4 > p:nth-child(1) {color:white; margin-top: 40px; margin-left: 40px;}
+.smile-4 > p:nth-child(3) {color:white; margin-bottom: 40px; margin-left: 458px;}
+.smile-4:hover > div > img {animation-play-state: paused;}
+
+.footer {
+  border: 2px solid var(--blue);
+  background-color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+} 
+.footer > img {height: 100px; width: 250px; margin-top: 8px;}
+.footer > div > p {color: white; text-align: right; padding-bottom: 8px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
